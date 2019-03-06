@@ -7,7 +7,6 @@ import datetime
 config = json.load(open("config.json", "r"))
 
 bot = commands.Bot(command_prefix="!", self_bot=True)
-bot.bg_task = bot.loop.create_task(miningAway())
 initial_extensions = ['cogs.TokenVerification']
 
 if __name__ == '__main__':
@@ -19,10 +18,11 @@ if __name__ == '__main__':
 
 async def miningAway():
     await bot.wait_until_ready()
-    destination = bot.get_channel(config['mine_in_this_channel'])
+    destination = bot.get_channel(config['destination'])
     while not bot.is_closed():
         await destination.send("m!m")
         await asyncio.sleep(config['delay'])
+bot.bg_task = bot.loop.create_task(miningAway())
 
 @bot.event
 async def on_ready():
@@ -34,7 +34,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     # Only handling messages in the channel specified in config.json
-    if message.channel.id == config['mine_in_this_channel']:
+    if message.channel.id == config['destination']:
         # Only handling messages from the Discord Miner bot specifically
         if message.author.id == 492969308201418756:
             try:
