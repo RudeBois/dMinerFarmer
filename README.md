@@ -14,7 +14,7 @@ Enter the `config.json` file. Within this file, there are 4 things that you must
 - `destination` is a channel ID in which the bot will operate. This channel ID must be provided to `config.json` as an integer.
 - `token` is the unique token for your Discord account. You can find a guide to locate your token here: https://discordhelp.net/discord-token. Your token must be provided to `config.json` as a string.
 - `delay` is the delay in seconds in between each new mine. This must be provided to `config.json` as an integer.
-- `autoRepair` is to specify if you want to enable automatic pickaxe repairing. This must be provided to `config.json` as a boolean (True or False).
+- `autoRepair` is to specify if you want to enable automatic pickaxe repairing. This must be provided to `config.json` as a boolean (true or false).
 
 If you wish to make any changes have effect, you must save the changes within `config.json` and restart your bot. 
 
