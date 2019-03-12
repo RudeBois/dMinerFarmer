@@ -18,5 +18,8 @@ Enter the `config.json` file. Within this file, there are 4 things that you must
 
 If you wish to make any changes have effect, you must save the changes within `config.json` and restart your bot. 
 
+# Running the bot
+Once you have successfully completed filling in `config.json`, navigate to your command prompt and run the Python script with `python main.py`.
+
 # Disclaimer
 I, the creator of this bot, remind you that user-bots, or self-bots, are against the Discord Terms of Service and may result in your account being terminated. Utilizing this bot may also result in you being banned from the Discord Miner community. By downloading this script and utilizing it, you claim all responsibility for the effects of your usage of this bot.
